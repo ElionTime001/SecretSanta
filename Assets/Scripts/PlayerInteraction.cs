@@ -9,15 +9,14 @@ public interface IInteractable
 public class PlayerInteraction : MonoBehaviour
 {
     [Header("Interaction Settings")]
-    public Transform interactorSource;   // Usually the player camera
+    public Transform interactorSource;   
     public float interactRange = 3f;
-    public LayerMask interactableLayer;  // Optional: only hit specific layers
+    public LayerMask interactableLayer;  
 
     private PlayerInputActions input;
 
     void Awake()
     {
-        // Get reference to input actions
         input = PlayerInputManager.InputActions;
         Debug.Log(input == null ? "InputActions is null!" : "InputActions loaded correctly");
     }

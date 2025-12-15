@@ -58,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnDisable()
     {
+        if (input != null)
         input.Player.Disable();
     }
 
