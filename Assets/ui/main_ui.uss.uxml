@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/ui/main_ui.uss?fileID=7433441132597879392&amp;guid=be2fcf2c337314bdb8f657c80b90c17e&amp;type=3#main_ui" />
+    <ui:Label text="0/3" name="number_parts" style="height: 58px; width: 91px; -unity-text-align: upper-center; white-space: pre-wrap; font-size: 40px; right: 0; left: 0; top: 0; bottom: 0; align-self: flex-end; -unity-font-style: bold;" />
+    <ui:VisualElement name="Items" style="flex-grow: 1; align-self: flex-end; width: 100px;">
+        <ui:Button double-click-selects-word="true" style="background-image: url(&quot;project://database/Assets/sprites/characters/alien%20space%20ship.png?fileID=21300000&amp;guid=155fdb7546438b74f9eb8de2ccedb802&amp;type=3#alien space ship&quot;); background-color: rgba(188, 188, 188, 0);" />
+        <ui:Button text="&#10;" style="background-image: url(&quot;project://database/Assets/sprites/characters/red%20dog.png?fileID=2800000&amp;guid=a5c42250a81074041b19eb4dacc1db34&amp;type=3#red dog&quot;); background-color: rgba(188, 188, 188, 0);" />
+    </ui:VisualElement>
+    <ui:Label text="Press E to interact" name="press" style="align-self: flex-end; -unity-font-style: bold;" />
+</ui:UXML>
