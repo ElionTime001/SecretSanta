@@ -4,20 +4,36 @@ using UnityEngine.AI;
 public class stalker_behaviour : MonoBehaviour
 {
     public float Radious = 10f;
+    public float attackRange = 15f;
     private NavMeshAgent nMAgent;
+    public Transform target;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         nMAgent = GetComponent<NavMeshAgent>();
         SetRandomDestination();
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (HasArrived())
+        if( Vector3.Distance (this.transform.position, target.position) < attackRange)
         {
-            SetRandomDestination();
+            nMAgent.speed = 5;
+            NavMeshHit hit;
+            NavMesh.SamplePosition(target.position, out hit, 2f, 1);
+            nMAgent.SetDestination(hit.position);
+            Debug.Log(Vector3.Distance (this.transform.position, target.position));
+
+        }
+        else
+        {
+            nMAgent.speed = 2; //should not be hardcoded 
+            if (HasArrived())
+            {
+                SetRandomDestination();
+            }
         }
         // Debug.Log(GetRandomPoint() );
     }

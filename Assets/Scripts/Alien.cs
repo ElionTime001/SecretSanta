@@ -1,4 +1,4 @@
-using UnityEngine;
+ using UnityEngine;
 
 public class Alien : MonoBehaviour, IInteractable
 {
@@ -48,7 +48,7 @@ public class Alien : MonoBehaviour, IInteractable
                 }
                 else
                 {
-                    DialogueUI.Instance.ShowDialogue("Hehehehehe. Tasty. Machine tasty. More.");
+                    DialogueUI.Instance.ShowDialogue("Please help me come home. Repair ship. Please.");
                 }
 
 

@@ -31,7 +31,7 @@ public class Item : MonoBehaviour, IInteractable
             }
             else
             {
-                DialogueUI.Instance.ShowDialogue("(I should check on my ship....)");
+                DialogueUI.Instance.ShowDialogue("(Maybe those strange creatures can help me....)");
             }
         }
     }
