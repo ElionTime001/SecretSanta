@@ -28,6 +28,7 @@ public class Item : MonoBehaviour, IInteractable
             if (inventory.HasItem("key"))
             {
                 OnSuccessfulInteraction();
+                EndGameController.Instance.TriggerEndGame();
             }
             else
             {
